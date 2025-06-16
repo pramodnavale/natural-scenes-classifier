@@ -11,7 +11,7 @@ st.title("Natural Scenes Image Classifier")
 st.write("Upload an image of a natural scene, and the model will classify it as **buildings**, **forest**, or **sea**.")
 
 # Load the trained model
-model = load_model(r"C:\Users\Pramod\Documents\DL & AI\CNN\Natural Scenes Image Classification\Streamlit Deployment\scene_classifier.keras")
+model = load_model(r"scene_classifier.keras")
 
 # Define class names
 class_names = ['buildings', 'forest', 'sea']
