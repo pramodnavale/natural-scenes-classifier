@@ -6,6 +6,8 @@ from PIL import Image
 import os
 import warnings
 warnings.filterwarnings("ignore")
+#Supress warnings
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 # Set page title
 st.set_page_config(page_title="Scene Classifier", layout="centered")
