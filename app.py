@@ -3,6 +3,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from PIL import Image
+import os
 
 # Set page title
 st.set_page_config(page_title="Scene Classifier", layout="centered")
@@ -10,8 +11,8 @@ st.set_page_config(page_title="Scene Classifier", layout="centered")
 st.title("Natural Scenes Image Classifier")
 st.write("Upload an image of a natural scene, and the model will classify it as **buildings**, **forest**, or **sea**.")
 
-# Load the trained model
-model = load_model(r"scene_classifier.keras")
+model_path = os.path.join(os.path.dirname(__file__), "scene_classifier.keras")
+model = load_model(model_path)
 
 # Define class names
 class_names = ['buildings', 'forest', 'sea']
