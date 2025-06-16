@@ -26,7 +26,7 @@ if uploaded_file is not None:
     st.image(img, caption="Uploaded Image", use_column_width=True)
 
     # Preprocess the image
-    img = img.resize((224, 224))  # Update if your model used different size
+    img = img.resize((150, 150))  # Update if your model used different size
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0) / 255.0  # Normalize
 
