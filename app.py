@@ -38,3 +38,8 @@ if uploaded_file is not None:
     # Show results
     st.success(f"**Prediction:** {predicted_class}")
     st.info(f"**Confidence:** {confidence:.2f}")
+
+ # Show class probabilities
+    st.subheader("Class Probabilities:")
+    for class_name, prob in zip(class_names, predictions[0]):
+        st.progress(int(prob * 100), text=f"{class_name}: {int(prob * 100)}%")
