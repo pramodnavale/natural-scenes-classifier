@@ -6,8 +6,7 @@ from PIL import Image
 import os
 import warnings
 warnings.filterwarnings("ignore")
-#Supress warnings
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 
 # Set page title
 st.set_page_config(page_title="Scene Classifier", layout="centered")
@@ -27,7 +26,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 if uploaded_file is not None:
     # Display the uploaded image
     img = Image.open(uploaded_file).convert('RGB')
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image")
 
     # Preprocess the image
     img = img.resize((150, 150))  # Update if your model used different size
